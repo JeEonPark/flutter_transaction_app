@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_transaction_app/screens/home_fragment.dart';
 
 class MainPage extends StatefulWidget {
-  MainPage({Key? key}) : super(key: key);
+  const MainPage({Key? key}) : super(key: key);
 
   @override
   State<MainPage> createState() => _MainPageState();
@@ -11,10 +11,10 @@ class MainPage extends StatefulWidget {
 class _MainPageState extends State<MainPage> {
   int _currentIndex = 0;
   final List<Widget> _fragments = [
-    HomeFragment(),
-    HomeFragment(),
-    HomeFragment(),
-    HomeFragment(),
+    const HomeFragment(),
+    const HomeFragment(),
+    const HomeFragment(),
+    const HomeFragment(),
   ];
 
   @override

@@ -13,7 +13,7 @@ void main() async {
       title: 'Navigator',
       initialRoute: '/',
       routes: {
-        '/': (context) => MainPage(),
+        '/': (context) => const MainPage(),
       },
     ),
   );

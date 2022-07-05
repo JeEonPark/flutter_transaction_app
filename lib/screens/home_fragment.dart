@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class HomeFragment extends StatefulWidget {
-  HomeFragment({Key? key}) : super(key: key);
+  const HomeFragment({Key? key}) : super(key: key);
 
   @override
   State<HomeFragment> createState() => _HomeFragmentState();
@@ -36,7 +36,7 @@ class _HomeFragmentState extends State<HomeFragment> {
                       "DevJonny",
                       style: TextStyle(
                         color: Color(0xFF2A2F58),
-                        fontWeight: FontWeight.w800,
+                        fontWeight: FontWeight.w600,
                         fontSize: 16,
                       ),
                     ),
@@ -149,7 +149,7 @@ class _HomeFragmentState extends State<HomeFragment> {
           Padding(
             padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
             child: _makeHistory(
-                Image.asset("assets/images/dribbble_logo.png"), "Dribbble Pro", "06 Jul 2022", -105.55, false),
+                Image.asset("assets/images/dribbble_logo.png"), "Dribbble Pro", "06 Jul 2022", 105.55, false),
           ),
         ],
       ),
@@ -159,7 +159,7 @@ class _HomeFragmentState extends State<HomeFragment> {
 
 Widget _makeCard(int cardCompany, String exp, double balance, int lastCardNum, Color color) {
   return Container(
-    padding: EdgeInsets.fromLTRB(25, 14, 25, 14),
+    padding: const EdgeInsets.fromLTRB(25, 14, 25, 14),
     width: 250,
     height: 250,
     decoration: BoxDecoration(
@@ -206,7 +206,7 @@ Widget _makeHistory(Image image, String name, String date, double charge, bool t
   return Column(
     children: [
       SizedBox(
-        height: 90,
+        height: 80,
         child: Row(
           children: [
             Padding(
@@ -227,16 +227,16 @@ Widget _makeHistory(Image image, String name, String date, double charge, bool t
               children: [
                 Text(
                   name,
-                  style: TextStyle(
+                  style: const TextStyle(
                     color: Color(0xFF2A2F58),
                     fontWeight: FontWeight.w600,
-                    fontSize: 14,
+                    fontSize: 16,
                   ),
                 ),
                 const SizedBox(height: 10),
                 Text(
                   date,
-                  style: TextStyle(
+                  style: const TextStyle(
                     color: Colors.grey,
                     fontWeight: FontWeight.w400,
                     fontSize: 12,
@@ -248,12 +248,12 @@ Widget _makeHistory(Image image, String name, String date, double charge, bool t
             if (transferIn)
               (Text(
                 "+\$" + charge.toString(),
-                style: TextStyle(color: Color(0xFF5874DF), fontWeight: FontWeight.w800),
+                style: const TextStyle(color: Color(0xFF5874DF), fontWeight: FontWeight.w600),
               )),
             if (!transferIn)
               (Text(
                 "-\$" + charge.toString(),
-                style: TextStyle(color: Color(0xFFFF6D5F), fontWeight: FontWeight.w800),
+                style: const TextStyle(color: Color(0xFFFF6D5F), fontWeight: FontWeight.w600),
               )),
           ],
         ),
